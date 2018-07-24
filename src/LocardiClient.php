@@ -7,7 +7,6 @@ use Locardi\PhpSdk\Api\OrganizationUserRequestApi;
 use Locardi\PhpSdk\Authentication\JwtAuthentication;
 use Locardi\PhpSdk\Exception\ClientException;
 use Locardi\PhpSdk\HttpClient\CurlClient;
-use Locardi\PhpSdk\HttpClient\SocketClient;
 use Locardi\PhpSdk\Serializer\JsonSerializer;
 
 class LocardiClient
@@ -57,7 +56,7 @@ class LocardiClient
         $this->client = new Client(
             $endpoint,
             $authentication,
-            $debug ? $curlClient : new SocketClient(),
+            $curlClient,
             $jsonSerializer
         );
     }

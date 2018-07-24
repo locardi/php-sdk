@@ -1,5 +1,6 @@
 {
     "name": "locardi/php-sdk",
+    "description": "A SDK for Locardi forensics",
     "require": {
         "php": ">=5.3.9",
         "ext-curl": "*",

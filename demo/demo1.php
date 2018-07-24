@@ -37,3 +37,16 @@ $client->send(array(
         ),
     ),
 ));
+
+$client->send(array(
+    'client_login_failed_unknown_username_request' => array(
+        'ip_address' => '8.8.8.8',
+        'http_method' => 'GET',
+        'timestamp' => data('c'),
+        'user_agent' => 'Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/57.0.2987.110 Safari\/537.36',
+        'uri' => 'https://www.getlocardi.com/?param1=value1&param2=value2',
+        'user' => array(
+            'name' => 'iamahacker', // this is the username or the email used for the login attempt
+        )
+    )
+));

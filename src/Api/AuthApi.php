@@ -11,6 +11,6 @@ class AuthApi implements ApiInterface
 
     public function getPath()
     {
-        return '/collector/login';
+        return '/jwt/token';
     }
 }
