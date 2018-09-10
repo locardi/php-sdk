@@ -1,4 +1,4 @@
 /vendor
 /.idea
-
+./composer.lock
 ./demo/locardi-php-sdk.json
