@@ -1,2 +1,4 @@
 /vendor
 /.idea
+
+./demo/locardi-php-sdk.json

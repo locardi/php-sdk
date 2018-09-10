@@ -2,9 +2,9 @@
     "name": "locardi/php-sdk",
     "description": "A SDK for Locardi forensics",
     "require": {
-        "php": ">=5.3.9",
+        "php": ">=5.6",
         "ext-curl": "*",
-        "zendframework/zend-diactoros": "1.4.*"
+        "zendframework/zend-diactoros": "1.8.*"
     },
     "require-dev": {
         "symfony/var-dumper": "2.6.*",

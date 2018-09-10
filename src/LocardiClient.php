@@ -3,6 +3,7 @@
 namespace Locardi\PhpSdk;
 
 use Locardi\PhpSdk\Api\AuthApi;
+use Locardi\PhpSdk\Api\ClientLoginFailedUnknownUsernameRequestApi;
 use Locardi\PhpSdk\Api\OrganizationUserRequestApi;
 use Locardi\PhpSdk\Authentication\JwtAuthentication;
 use Locardi\PhpSdk\Exception\ClientException;
@@ -81,11 +82,10 @@ class LocardiClient
 
     public function send(array $data)
     {
-        if (isset($data['organization_user_request'])) {
+        if (isset($data['organization_user_request']) || isset($data['client_login_failed_unknown_username_request'])) {
             $this
                 ->client
-                ->send(new OrganizationUserRequestApi(), $data)
-            ;
+                ->send(new OrganizationUserRequestApi(), $data);
         } else {
             throw new ClientException('Invalid API');
         }
